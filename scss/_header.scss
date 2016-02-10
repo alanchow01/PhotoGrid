@@ -1,0 +1,113 @@
+body, input, button {
+	background-color: #000;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: $mobile-font-size;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	text-align: center;
+  margin: 0;
+	@media screen and (min-width: $tablet-width) {
+		font-size: $tablet-font-size;
+	}
+}
+
+.header {
+	height: 85vh;
+	width: 100%;
+	transition: all .4s linear;
+	display: flex;
+		flex-flow: column;
+		justify-content: center;
+}
+
+.header-position {
+	height: 20vh;
+}
+
+.header-inner-wrap {
+	width: 100%;
+	display: flex;
+		align-content: center;
+		flex-flow: wrap;
+		justify-content: center;
+		@media screen and (min-width: $tablet-width) {
+			align-items: flex-end;
+		}
+		@media screen and (min-width: $desktop-width) {
+			justify-content: flex-start;
+			padding-left: 2rem;
+		}
+}
+.search-wrapper {
+	position: relative;
+	width: 19rem;
+	@media screen and (min-width: $tablet-width) {
+		margin-bottom: 0;
+		width: 16rem;
+	@media screen and (min-width: $desktop-width) {
+		width: 19rem;
+		}
+	}
+}
+
+form {
+	width: 100%;
+	&:before {
+		@include element-wrapper;
+		content: '#';
+		font-size: $mobile-font-size * 1.65;
+		left: .5rem;
+		top: -.15rem;
+		@media screen and (min-width: $tablet-width) {
+			font-size: $tablet-font-size * 1.5;
+			top: 0;
+		}
+	}
+}
+
+.insta-logo {
+	margin-bottom: 1.5rem;
+	width: 19rem;
+	@media screen and (min-width: $tablet-width) {
+		margin-bottom: 0;
+		margin-right: 1rem;
+		width: 15.5rem;
+	}
+	@media screen and (min-width: $desktop-width) {
+		width: 19rem;
+	}
+}
+
+.search-box {
+	@include search-styles;
+	border-bottom: 1px solid #fff;
+	padding: 0 0 .5rem 2rem;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	@media screen and (min-width: $tablet-width) {
+		font-size: $tablet-font-size * 1.15;
+		padding: 0 0 .25rem 2rem;
+		}
+	}
+
+.search-btn {
+	@include search-styles;
+	@include element-wrapper;
+	color: #fff;
+	cursor: pointer;
+	font-size: .8rem;
+	right: .5rem;
+	top: 0;
+	&:hover {
+		color: #c2c2c2;
+	}
+	@media screen and (min-width: $tablet-width) {
+		font-size: $tablet-font-size * .75;
+	}
+	@media screen and (min-width: $desktop-width) {
+		font-size: $tablet-font-size;
+	}
+}

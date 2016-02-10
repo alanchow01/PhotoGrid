@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>InstaGrid</title>
+		<meta name="description" content="InstaGrid">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="build/css/styles.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header-inner-wrap">
+				<div class="insta-logo">
+				<h1 class="screen-reader">Instagrid</h1>
+					<img src="images/instagrid-logo.svg" alt="Instagrid">
+				</div>
+				<div class="search-wrapper">
+					<form class="form">
+						<input type="text" autocomplete="none" name="search" placeholder="Search for a hashtag" class="search-box" id="search">
+						<button type="submit" class="search-btn" id="button"><i class="fa fa-search fa-lg"></i></button>
+					</form>
+				</div>
+			</div>
+		</header>
+
+		<section class="photo-grid">
+		<ul class="insta-photos">
+		</ul>
+		<button type="submit" class="load-more" id="button">Next 12 images</button>
+		</section>
+		
+		<img src="images/ajax-loader.gif" alt="loading images" class="loading-gif"/>
+
+		<footer>
+		<p>&copy; Copyright 2016 INSTAGRID</p>
+		</footer>
+
+		<!-- Javascript files -->
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="build/js/scripts.min.js"></script>
+	</body>
+
+</html>

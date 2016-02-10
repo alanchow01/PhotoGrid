@@ -1,0 +1,84 @@
+.loading-gif {
+  display: none;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.photo-grid {
+  display: none;
+}
+
+.insta-photos {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-wrapper {
+  flex: 0 1 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+   img {
+    width: 100%;
+  }
+	@media screen and (min-width: $tablet-width) {
+		flex: 0 1 50%;
+	}
+	@media screen and (min-width: $desktop-width) {
+		flex: 0 1 25%;
+	}
+  &:hover > .meta-wrapper {
+    height: 70px;
+  }
+}
+
+.meta-wrapper {
+  @include element-wrapper;
+  background: rgba(0,0,0,.65);
+  overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  z-index: 99;
+  transition: height .5s linear;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.usr-meta {
+  text-align: right;
+  margin-right: .75rem;
+}
+
+.usr-img img {
+  border-radius: 50%;
+  width: 3.15rem;
+  margin-left: .75rem;
+}
+
+.usr-name {
+	font-size: $mobile-font-size * 1.15;
+}
+
+.usr-comms-likes {
+  font-size: $mobile-font-size * .9;
+  line-height: 2;
+}
+
+.load-more {
+  background: #e2231a;
+  border: 0;
+  display: none;
+  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  &:hover {
+    cursor: pointer;
+  }
+}

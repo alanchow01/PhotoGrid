@@ -1,0 +1,14 @@
+// header specific mixins
+@mixin element-wrapper {
+  font-weight: bold;
+  position: absolute;
+}
+
+@mixin search-styles {
+  background: transparent;
+  border: 0;
+  font-size: $mobile-font-size * 1.15;
+  @media screen and (min-width: $tablet-width) {
+    font-size: $tablet-font-size * 1.15;
+  }
+}
