@@ -104,7 +104,7 @@ body, input, button {
   line-height: 1;
   text-align: center;
   margin: 0; }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     body, input, button {
       font-size: 16px; } }
 
@@ -139,13 +139,13 @@ body, input, button {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     .header-inner-wrap {
       -webkit-align-items: flex-end;
           -ms-flex-align: end;
                   -ms-grid-row-align: flex-end;
               align-items: flex-end; } }
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .header-inner-wrap {
       -webkit-justify-content: flex-start;
           -ms-flex-pack: start;
@@ -155,11 +155,11 @@ body, input, button {
 .search-wrapper {
   position: relative;
   width: 19rem; }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     .search-wrapper {
       margin-bottom: 0;
       width: 16rem; } }
-  @media screen and (min-width: 600px) and (min-width: 1000px) {
+  @media (min-width: 600px) and (min-width: 1000px) {
     .search-wrapper {
       width: 19rem; } }
 
@@ -172,7 +172,7 @@ form {
     font-size: 23.1px;
     left: .5rem;
     top: -.15rem; }
-    @media screen and (min-width: 600px) {
+    @media (min-width: 600px) {
       form:before {
         font-size: 24px;
         top: 0; } }
@@ -180,12 +180,12 @@ form {
 .insta-logo {
   margin-bottom: 1.5rem;
   width: 19rem; }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     .insta-logo {
       margin-bottom: 0;
       margin-right: 1rem;
       width: 15.5rem; } }
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .insta-logo {
       width: 19rem; } }
 
@@ -201,7 +201,7 @@ form {
   @media screen and (min-width: 600px) {
     .search-box {
       font-size: 18.4px; } }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     .search-box {
       font-size: 18.4px;
       padding: 0 0 .25rem 2rem; } }
@@ -221,11 +221,11 @@ form {
     .search-btn {
       font-size: 18.4px; } }
   .search-btn:hover {
-    color: #c2c2c2; }
-  @media screen and (min-width: 600px) {
+    color: #e2231a; }
+  @media (min-width: 600px) {
     .search-btn {
       font-size: 12px; } }
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     .search-btn {
       font-size: 16px; } }
 
@@ -234,7 +234,7 @@ form {
   height: 38px;
   margin: 1rem auto;
   width: 38px; }
-  @media (min-width: 1000px) {
+  @media screen and (min-width: 1000px) {
     .loading-gif {
       margin-top: 1rem; } }
 
@@ -328,10 +328,10 @@ form {
 footer {
   color: #c2c2c2;
   padding: 2rem 0; }
-  @media screen and (min-width: 600px) {
+  @media (min-width: 600px) {
     footer {
       font-size: 14.4px; } }
-  @media screen and (min-width: 1000px) {
+  @media (min-width: 1000px) {
     footer {
       padding-left: 2rem;
       text-align: left; } }
