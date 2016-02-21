@@ -11,4 +11,17 @@
   @media screen and (min-width: $tablet-width) {
     font-size: $tablet-font-size * 1.15;
   }
+
+  //media query mixins
+}
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
 }

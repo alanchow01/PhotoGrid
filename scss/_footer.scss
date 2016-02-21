@@ -1,11 +1,14 @@
 footer {
   color: #c2c2c2;
   padding: 2rem 0;
-  @media screen and (min-width: $tablet-width) {
+  @include tablet {
     font-size: 16px *.9;
   }
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     padding-left: 2rem;
     text-align: left;
+  }
+  span {
+    text-transform: uppercase;
   }
 }
