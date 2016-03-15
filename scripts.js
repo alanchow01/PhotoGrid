@@ -7,24 +7,20 @@ $(function () {
   var pagination = ''; // Variable to hold next set of images. Finds next_url property in API
 
   var buildHTML = function (keyVal) {
-    instaImage += '<div class="photo-wrapper">';
-    instaImage +=   '<li>';
-    instaImage +=     '<a href=' + keyVal.link + ' target="_blank"><img src=' + keyVal.images.standard_resolution.url + '></a>';
-    instaImage +=   '</li>';
-    instaImage += '<div class="meta-wrapper">';
-    instaImage +=   '<div class="usr-img"><img src=' + keyVal.user.profile_picture + '></div>';
-    instaImage +=     '<div class="usr-meta">';
+    instaImage += '<li class="photo-wrapper">';
+    instaImage +=   '<a href=' + keyVal.link + ' target="_blank"><img src=' + keyVal.images.standard_resolution.url + '></a>';
+    instaImage +=     '<div class="meta-wrapper">';
+    instaImage +=       '<div class="usr-img"><img src=' + keyVal.user.profile_picture + '></div>';
+    instaImage +=       '<div class="usr-meta">';
     instaImage +=       '<div class="usr-name">' + keyVal.user.username + '</div>';
     instaImage +=       '<div class="usr-comms-likes"><i class="fa fa-comments"></i> ' + keyVal.comments.count + ' <i class="fa fa-heart"></i> ' + keyVal.likes.count + '</div>';
-    instaImage +=     '</div>';
-    instaImage += '</div></div>';
+    instaImage +=     '</div><!--end usr-meta--></div><!--end meta-wrapper-->';
+    instaImage += '</li>';
   };
 
   var buildFail = function () {
     $instaPhotos.empty();
-    instaImage += '<div class="photo-wrapper">';
-    instaImage +=   '<li>Something went wrong, please search again.</li>';
-    instaImage += '</div>';
+    instaImage += '<li class="photo-wrapper">Something went wrong, please search again.</li>';
     $instaPhotos.append(instaImage);
     instaImage = '';
     $('.loading-gif').css('display', 'none');

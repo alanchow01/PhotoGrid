@@ -11,7 +11,7 @@ var gulp = require('gulp'),
  browserSync = require('browser-sync').create();
 
 gulp.task('uglify', function(){
-    gulp.src('js/*.js') // What files do we want gulp to consume?
+    gulp.src('scripts.js') // What files do we want gulp to consume?
         .pipe(jscs())
         .pipe(jscs.reporter())
         .pipe(jshint())
@@ -19,7 +19,7 @@ gulp.task('uglify', function(){
         .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
         .pipe(uglify()) // Call the uglify function on these files
         .pipe(rename({ extname: '.min.js' }))
-        .pipe(gulp.dest('build/js')); // Where do we put the result?
+        .pipe(gulp.dest('./build/js')); // Where do we put the result?
 });
 
 gulp.task('sass', function() {
@@ -35,7 +35,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['js/*.js'], ['uglify']);
+  gulp.watch(['scripts.js'], ['uglify']);
   gulp.watch(('scss/*.scss'), ['sass']);
   gulp.watch(['build/js/*.min.js', 'index.html', 'build/css/*.min.css', 'css/styles.css']).on('change', browserSync.reload);
   browserSync.init({
